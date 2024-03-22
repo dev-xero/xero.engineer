@@ -5,7 +5,5 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
-  modules: [
-    "@nuxtjs/eslint-module"
-  ]
+  modules: ["@nuxtjs/eslint-module", "@nuxt/content"]
 })
