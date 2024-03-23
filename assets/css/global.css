@@ -25,6 +25,7 @@
     --color-neutral-900: hsl(230, 25%, 5%);
     --color-neutral-500: hsl(229, 10%, 31%);
     --color-neutral-200: hsl(212, 28%, 86%);
+    --color-neutral-100: hsl(180, 33%, 99%);
     --color-neutral-000: hsl(0, 0%, 100%);
     --color-green-500: hsl(141, 81%, 52%);
 }
@@ -38,6 +39,7 @@
     padding: 0px;
     box-sizing: border-box;
     font: var(--font-paragraph);
+    transition: background-color 100ms ease-in;
 }
 
 html {
@@ -82,6 +84,7 @@ header.navigation-bar h3.navigation-logo {
 header.navigation-bar h3.navigation-logo a {
     text-decoration: none;
     font-weight: bold;
+    color: var(--color-neutral-900);
 }
 
 header.navigation-bar ul.navigation-links {
@@ -155,6 +158,22 @@ body.dark {
 
 body.dark header.navigation-bar {
     background-color: var(--color-neutral-black);
+}
+
+body.dark header.navigation-bar ul.navigation-links li a {
+    color: var(--color-neutral-200);
+}
+
+body.dark header.navigation-bar ul.navigation-links li a:hover {
+    color: var(--color-neutral-100);
+}
+
+body.dark header.navigation-bar h3.navigation-logo a {
+    color: var(--color-neutral-100);
+}
+
+body.dark header.navigation-bar span.theme-switcher {
+    color: var(--color-neutral-200);
 }
 
 body.dark header.navigation-bar span.theme-switcher .theme-circle {
