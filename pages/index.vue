@@ -1,5 +1,6 @@
 <template>
     <NavigationBar />
+    <Introduction />
 </template>
 
 <script setup lang="ts">

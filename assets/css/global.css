@@ -54,6 +54,31 @@ body {
     height: 100vh;
 }
 
+/* RESPONSIVE: GENERAL */
+@media screen and (max-width: 800px) {
+    .contained,
+    header.navigation-bar.contained,
+    section.contained {
+        width: 90%;
+        max-width: 90%;
+        margin: 0px auto;
+    }
+
+    .paragraph {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contained,
+    header.navigation-bar.contained,
+    section.contained {
+        margin: 0px 8px;
+    }
+}
+
+/* GENERAL */
+
 .contained {
     width: min(70%, 1000px);
     max-width: min(70%, 1000px);
@@ -66,6 +91,18 @@ body {
 
 .grey-text {
     color: var(--color-neutral-500);
+}
+
+.paragraph {
+    font: var(--font-paragraph);
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.figure-head {
+    font: var(--font-large-heading);
+    font-size: 112px;
+    line-height: 120px;
 }
 
 /* NAVIGATION BAR */
@@ -128,13 +165,8 @@ header.navigation-bar span.theme-switcher .theme-circle {
     border-radius: 4px;
 }
 
+/* RESPONSIVE: NAVIGATION BAR */
 @media screen and (max-width: 800px) {
-    .contained {
-        width: 90%;
-        max-width: none;
-        margin: 0px auto;
-    }
-
     header.navigation-bar {
         flex-direction: column;
         margin: 0px auto;
@@ -150,7 +182,7 @@ header.navigation-bar span.theme-switcher .theme-circle {
     }
 }
 
-/* DARK THEME STYLES */
+/* DARK THEME STYLES: NAVIGATION BAR */
 body.dark {
     background-color: var(--color-neutral-black);
     color: var(--color-neutral-200);
@@ -178,4 +210,62 @@ body.dark header.navigation-bar span.theme-switcher {
 
 body.dark header.navigation-bar span.theme-switcher .theme-circle {
     background-color: var(--color-green-500);
+}
+
+/* INTRODUCTION STYLES */
+section.introduction {
+    margin: 32px auto;
+}
+
+section.introduction p.jp {
+    color: var(--color-neutral-500);
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+section.introduction h1.figure-head {
+    margin-bottom: 24px;
+}
+
+section.introduction p.bio {
+    color: var(--color-neutral-500);
+}
+
+/* DARK THEME STYLES: INTRODUCTION */
+body.dark section.introduction h1.figure-head {
+    color: var(--color-neutral-100);
+}
+
+body.dark p.paragraph {
+    color: var(--color-neutral-200);
+}
+
+/* RESPONSIVE: INTRODUCTION */
+@media screen and (max-width: 800px) {
+    section.introduction h1.figure-head {
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    section.introduction p.paragraph {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.introduction h1.figure-head {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.introduction h1.figure-head {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    section.introduction p.paragraph {
+        font-size: 16px !important;
+    }
 }
