@@ -19,50 +19,47 @@
     </header>
 </template>
 
-<script lang="ts">
-import { setTheme } from "~/utils/theme-switcher.ts"
+<script setup lang="ts">
+import { ref } from "vue";
+import { setTheme } from "~/utils/theme-switcher.ts";
+
 enum linkTargetType {
     internal,
     external,
 }
-export default {
-    data() {
-        return {
-            navLinks: [
-                {
-                    id: 0,
-                    caption: "source code",
-                    url: "https://github.com/dev-xero",
-                    target: linkTargetType.external,
-                },
-                {
-                    id: 1,
-                    caption: "projects",
-                    url: "/projects",
-                    target: linkTargetType.internal,
-                },
-                {
-                    id: 2,
-                    caption: "blog",
-                    url: "/blog",
-                    target: linkTargetType.internal,
-                },
-                {
-                    id: 3,
-                    caption: "contact",
-                    url: "#contact",
-                    target: linkTargetType.internal,
-                },
-            ],
-        };
+
+const navLinks = ref([
+    {
+        id: 0,
+        caption: "source code",
+        url: "https://github.com/dev-xero",
+        target: linkTargetType.external,
     },
-    methods: {
-        getLinkTarget(type: linkTargetType): string {
-            return type == linkTargetType.external ? "_blank" : "_self";
-        },
-        handleThemeChange() {
-            setTheme()
-        },
+    {
+        id: 1,
+        caption: "projects",
+        url: "/projects",
+        target: linkTargetType.internal,
     },
+    {
+        id: 2,
+        caption: "blogs",
+        url: "/blogs",
+        target: linkTargetType.internal,
+    },
+    {
+        id: 3,
+        caption: "contact",
+        url: "#contact",
+        target: linkTargetType.internal,
+    },
+]);
+
+const getLinkTarget = (type: linkTargetType): string => {
+    return type == linkTargetType.external ? "_blank" : "_self";
+};
+
+const handleThemeChange = () => {
+    setTheme();
 };
 </script>
