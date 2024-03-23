@@ -21,10 +21,12 @@
     --font-paragraph: normal 24px "Gotham", sans-serif;
     --font-heading: bold 48px "Gotham", sans-serif;
 
+    --color-neutral-black: hsl(240, 7%, 3%);
     --color-neutral-900: hsl(230, 25%, 5%);
     --color-neutral-500: hsl(229, 10%, 31%);
     --color-neutral-200: hsl(212, 28%, 86%);
     --color-neutral-000: hsl(0, 0%, 100%);
+    --color-green-500: hsl(141, 81%, 52%);
 }
 
 /* RESET & DEFAULTS */
@@ -45,7 +47,9 @@ html {
 body {
     color: var(--color-neutral-900);
     background-color: var(--color-neutral-000);
+    width: 100vw;
     max-width: 100vw;
+    height: 100vh;
 }
 
 .contained {
@@ -141,4 +145,18 @@ header.navigation-bar span.theme-switcher .theme-circle {
     header.navigation-bar ul.navigation-links li a {
         font-size: 14px;
     }
+}
+
+/* DARK THEME STYLES */
+body.dark {
+    background-color: var(--color-neutral-black);
+    color: var(--color-neutral-200);
+}
+
+body.dark header.navigation-bar {
+    background-color: var(--color-neutral-black);
+}
+
+body.dark header.navigation-bar span.theme-switcher .theme-circle {
+    background-color: var(--color-green-500);
 }

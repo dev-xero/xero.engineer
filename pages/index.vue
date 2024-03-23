@@ -1,15 +1,17 @@
 <template>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-            />
-            <title>Xero // Home</title>
-        </head>
-        <body>
-            <NavigationBar />
-        </body>
-    </html>
+    <NavigationBar />
 </template>
+
+<script setup lang="ts">
+// eslint-disable-next-line no-undef
+useHead({
+    title: "XERO // Home",
+    meta: [
+        {
+            name: "description",
+            content:
+                "Welcome to my space on the internet for my ramblings and what not.",
+        },
+    ],
+});
+</script>
