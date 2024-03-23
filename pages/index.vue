@@ -5,7 +5,7 @@
 <script setup lang="ts">
 // eslint-disable-next-line no-undef
 useHead({
-    title: "XERO // Home",
+    title: "Xero // Home",
     meta: [
         {
             name: "description",
