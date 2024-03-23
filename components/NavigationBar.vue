@@ -13,13 +13,14 @@
                 >
             </li>
         </ul>
-        <span class="theme-switcher"
+        <span @click="handleThemeChange" class="theme-switcher"
             ><span class="theme-circle"></span>theme</span
         >
     </header>
 </template>
 
 <script lang="ts">
+import { setTheme } from "~/utils/theme-switcher.ts"
 enum linkTargetType {
     internal,
     external,
@@ -58,6 +59,9 @@ export default {
     methods: {
         getLinkTarget(type: linkTargetType): string {
             return type == linkTargetType.external ? "_blank" : "_self";
+        },
+        handleThemeChange() {
+            setTheme()
         },
     },
 };

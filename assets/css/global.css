@@ -105,6 +105,7 @@ header.navigation-bar span.theme-switcher {
     font-size: 18px;
     cursor: pointer;
     color: var(--color-neutral-500);
+    user-select: none;
 }
 
 header.navigation-bar span.theme-switcher:hover {
@@ -129,6 +130,7 @@ header.navigation-bar span.theme-switcher .theme-circle {
 
     header.navigation-bar {
         flex-direction: column;
+        margin: 0px auto;
     }
 
     header.navigation-bar ul.navigation-links {
